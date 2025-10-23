@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  color: #ffffff;
+}
+
+body {
+  background: linear-gradient(135deg, var(--beige) 0%, var(--light-beige) 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.signup-container {
+  width: 100%;
+  max-width: 700px;
+
+  background: #e07979;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.header-section {
+  background: var(--pink-header);
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--white);
+}
+
+.user-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-icon i {
+  color: var(--pink-header);
+  font-size: 30px;
+}
+
+.header-title {
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.header-subtitle {
+  font-size: 16px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.form-section {
+  padding: 30px 30px 40px;
+}
+
+.form-title {
+  font-size: 28px;
+  color: var(--dark-text);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.form-subtitle {
+  color: var(--light-text);
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+.input-group {
+  margin-bottom: 25px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--dark-text);
+  font-weight: 500;
+  font-size: 14px;
+  
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #e0d6d0;
+  border-radius: 10px;
+  font-size: 16px;
+  color: var(--dark-text);
+  background: var(--light-beige);
+  transition: all 0.3s ease;
+   background-color: #ffffff;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--soft-red);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+  /* background-color: #ffffff; */
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.terms {
+  display: flex;
+  align-items: flex-start;
+}
+
+.terms input {
+  margin-top: 4px;
+  margin-right: 8px;
+  accent-color: var(--soft-red);
+}
+
+.terms a {
+  color: var(--soft-red);
+  text-decoration: none;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+.signup-btn {
+  background: var(--soft-red);
+  color: var(--white);
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.signup-btn:hover {
+  background: var(--light-red);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(232, 168, 176, 0.4);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e0d6d0;
+}
+
+.divider span {
+  padding: 0 15px;
+  color: var(--light-text);
+  font-size: 14px;
+}
+
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.social-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--light-beige);
+  border: 1px solid #e0d6d0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-btn.google {
+  color: #db4437;
+}
+.social-btn.facebook {
+  color: #4267b2;
+}
+.social-btn.apple {
+  color: #000000;
+}
+
+.signin-link {
+  text-align: center;
+  color: var(--light-text);
+  font-size: 15px;
+}
+
+.signin-link a {
+  color: var(--soft-red);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.signin-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  .signup-container {
+    margin: 0 15px;
+  }
+
+  .header-section {
+    padding: 30px 15px;
+  }
+
+  .form-section {
+    padding: 25px 20px;
+  }
+}
+.signup-btn{
+  background-color: #ffffff;
+  color:#2e2a2a;
+}
