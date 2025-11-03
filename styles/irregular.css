@@ -9,6 +9,9 @@
             background-color: #f5f0e8;
             line-height: 1.6;
         }
+        a{
+            text-decoration: none;
+        }
 
         header {
             background-color: white;
