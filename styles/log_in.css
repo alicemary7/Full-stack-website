@@ -26,7 +26,7 @@ body {
 }
 
 .login-left {
-  background: #ee6e73;
+  background: #c41e3a;
   padding: 60px 40px;
   flex: 1;
   display: flex;
@@ -64,7 +64,7 @@ body {
 .icon-wrapper svg {
   width: 40px;
   height: 40px;
-  fill: #ff8a8a;
+  fill: #c41e3a;
 }
 
 .login-right {
@@ -109,7 +109,7 @@ body {
 
 .form-group input:focus {
   outline: none;
-  border-color: #ffb3ba;
+  border-color: #c41e3a;
   background: white;
 }
 
@@ -120,20 +120,20 @@ body {
 }
 
 .forgot-password a {
-  color: #ff8a8a;
+  color: #c41e3a;
   text-decoration: none;
   font-size: 13px;
   transition: color 0.3s ease;
 }
 
 .forgot-password a:hover {
-  color: #ff6b6b;
+  color: #c41e3a;
 }
 
 .login-btn {
   width: 100%;
   padding: 14px;
-  background: #ee6e73;
+  background: #c41e3a;
   color: white;
   border: none;
   border-radius: 10px;

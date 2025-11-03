@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - BLOOMHER</title>
+    <link rel="stylesheet" href="../styles/card.css" />
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="../index.html" style="color: #c41e3a">BLOOMHER</a></div>
+        <nav>
+            <a href="../pages/product.html">ORGANIC PADS</a>
+            <a href="#mhd">MHD</a>
+            <a href="#irregular">IRREGULAR PERIODS</a>
+        </nav>
+        <div class="header-right">
+            <a href="../pages/log_in.html" class="login">Login</a>
+            <a href="./card.html" class="cart-btn">🛒 Cart </a>
+        </div>
+    </header>
+
+    <div class="page-title">
+        <h1>Shopping Cart</h1>
+        <p>Review your items before checkout</p>
+    </div>
+
+    <div class="cart-container">
+        <!-- Cart Items Section -->
+        <div class="cart-items">
+            <h2>Your Items </h2>
+
+            <div class="cart-item">
+                <div class="item-image"><img src=""/></div>
+                <div class="item-details">
+                    <div class="item-name">Regular Flow Pads</div>
+                    <div class="item-size">Size: Regular (12 pads)</div>
+                    <div class="item-price">₹299</div>
+                </div>
+                <div class="item-actions">
+                    <div class="quantity-control">
+                        <input type="number" class="quantity-input" value="2" min="1" max="99">
+                    </div>
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <div class="item-image"><img src=""/></div>
+                <div class="item-details">
+                    <div class="item-name">Heavy Flow Pads</div>
+                    <div class="item-size">Size: Large (16 pads)</div>
+                    <div class="item-price">₹349</div>
+                </div>
+                <div class="item-actions">
+                    <div class="quantity-control">
+                        <input type="number" class="quantity-input" value="1" min="1" max="99">
+                    </div>
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <div class="item-image"><img src=""/></div>
+                <div class="item-details">
+                    <div class="item-name">Night Pads</div>
+                    <div class="item-size">Size: XL (24 pads)</div>
+                    <div class="item-price">₹399</div>
+                </div>
+                <div class="item-actions">
+                    <div class="quantity-control">
+                        <input type="number" class="quantity-input" value="1" min="1" max="99">
+                    </div>
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Summary Section -->
+        <div class="cart-summary">
+            <h2>Order Summary</h2>
+
+            <div class="summary-row subtotal">
+                <span>Subtotal:</span>
+                <span>₹1,346</span>
+            </div>
+
+            <div class="summary-row shipping">
+                <span>Shipping:</span>
+                <span class="free">Free</span>
+            </div>
+
+            <!-- <div class="promo-code">
+                <input type="text" class="promo-input" placeholder="Enter promo code">
+                <button class="apply-promo-btn">Apply Code</button>
+            </div> -->
+
+            <div class="summary-row total">
+                <span>Total:</span>
+                <span class="amount">₹1,346</span>
+            </div>
+
+            <button class="checkout-btn">Proceed to Checkout</button>
+            <a href="#" class="continue-shopping">← Continue Shopping</a>
+
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">🔒</div>
+                    <div>Secure Payment</div>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">🚚</div>
+                    <div>Free Shipping</div>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">↩️</div>
+                    <div>Easy Returns</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Empty Cart State (Hidden by default, show when cart is empty) -->
+    <!-- 
+    <div class="cart-container">
+        <div class="empty-cart">
+            <div class="empty-cart-icon">🛒</div>
+            <h2>Your Cart is Empty</h2>
+            <p>Looks like you haven't added any items to your cart yet.</p>
+            <a href="#" class="shop-now-btn">Start Shopping</a>
+        </div>
+    </div>
+    -->
+
+</body>
+</html>

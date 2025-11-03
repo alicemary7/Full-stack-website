@@ -16,13 +16,16 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  background: url(https://media.gettyimages.com/id/2007594524/photo/woman-relaxing-on-the-sofa-while-drinking-coffee-and-looking-through-window.jpg?s=612x612&w=gi&k=20&c=dlIUkGKhciIPOiKEYNOAOiGGFppBaOM1HMBgukEN5dw= ) ;
+  display: ;
+  
 }
 
 .signup-container {
   width: 100%;
   max-width: 700px;
 
-  background: #e07979;
+  background: #de405a;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
