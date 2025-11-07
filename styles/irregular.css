@@ -1,4 +1,5 @@
-   * {
+  
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -6,98 +7,122 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f0e8;
+            background-color: #f5f5dc;
             line-height: 1.6;
         }
-        a{
-            text-decoration: none;
-        }
 
-        header {
-            background-color: white;
-            padding: 20px 50px;
+        /* Navigation */
+        .navbar {
+            background: #fff;
+            padding: 20px 80px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .logo {
             font-size: 32px;
             font-weight: bold;
-            color: #c73659;
+            color: #c41e3a;
             letter-spacing: 2px;
         }
 
-        nav {
+        .nav-links {
             display: flex;
             gap: 40px;
+            list-style: none;
             align-items: center;
         }
 
-        nav a {
+        .nav-links a {
+            color: #1a1a1a;
             text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
 
-        nav a.active {
-            color: #c73659;
-            border-bottom: 2px solid #c73659;
-            padding-bottom: 5px;
+        .nav-links a:hover {
+            color: #c41e3a;
         }
 
-        .header-right {
+        .nav-buttons {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             align-items: center;
         }
 
-        .login {
-            color: #333;
+        .btn-login {
+            color: #1a1a1a;
             text-decoration: none;
-            font-weight: 600;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
 
-        .cart-btn {
-            background-color: #c73659;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
+        .btn-login:hover {
+            color: #c41e3a;
         }
+
+        .btn-cart {
+            padding: 12px 25px;
+            background: #c41e3a;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cart:hover {
+            background: #a01729;
+            transform: translateY(-2px);
+        }
+
+a{
+          text-decoration: none;
+        }
+
+
+
 
         .hero-section {
             background: linear-gradient(135deg, #c73659 0%, #a82d4a 100%);
             color: white;
-            padding: 80px 50px;
+            padding: 100px 0;
             text-align: center;
         }
 
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+
         .hero-section h1 {
-            font-size: 48px;
+            font-size: 56px;
             margin-bottom: 20px;
         }
 
         .hero-section p {
-            font-size: 20px;
-            max-width: 800px;
-            margin: 0 auto;
+            font-size: 22px;
             opacity: 0.95;
         }
 
         .content-container {
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 0 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 50px;
         }
 
         .intro-section {
-            background-color: white;
+            background-color: #fff5f5;
             border-radius: 15px;
             padding: 40px;
             margin-bottom: 40px;
@@ -210,10 +235,15 @@
         .cta-section {
             background-color: #c73659;
             color: white;
-            padding: 50px;
+            padding: 80px 0;
             text-align: center;
-            border-radius: 15px;
-            margin: 40px 0;
+            margin: 60px 0 0 0;
+        }
+
+        .cta-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 50px;
         }
 
         .cta-section h2 {
@@ -247,7 +277,7 @@
             background-color: #2a2a2a;
             color: #ccc;
             padding: 50px 0 30px;
-            margin-top: 60px;
+            margin-top: 0;
         }
 
         .footer-content {
@@ -311,7 +341,11 @@
             }
 
             .hero-section {
-                padding: 60px 20px;
+                padding: 60px 0;
+            }
+
+            .hero-content {
+                padding: 0 20px;
             }
 
             .hero-section h1 {
@@ -327,6 +361,14 @@
                 padding: 25px;
             }
 
+            .cta-section {
+                padding: 60px 0;
+            }
+
+            .cta-content {
+                padding: 0 20px;
+            }
+
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 40px;
@@ -337,4 +379,4 @@
                 padding: 20px 20px 0;
             }
         }
- 
+   
