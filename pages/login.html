@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping Cart - BLOOMHER</title>
-    <link rel="stylesheet" href="../styles/card.css" />
+    <title>Login - Regular Flow Pads</title>
+    <link rel="stylesheet" href="../styles/log_in.css" />
   </head>
   <body>
     <!-- Navigation -->
@@ -23,19 +23,61 @@
       </div>
     </nav>
 
-    <div class="container">
-      <div class="empty-cart-container">
-        <div class="empty-cart-icon">🛒</div>
-        <h2 class="empty-cart-title">Your Cart is Empty</h2>
-        <p class="empty-cart-text">
-          Looks like you haven't added anything to your cart yet.<br />
-          Start shopping and discover our amazing products!
-        </p>
-        <a href="./product.html" class="shop-now-btn">Start Shopping</a>
-        <!-- <a href="#" class="secondary-link">View Wishlist →</a> -->
+    <div class="main-content">
+      <div class="login-container">
+        <!-- <div class="logo-section">
+                <div class="brand-name">Regular Flow Pads</div>
+                <div class="tagline">Natural Care, Every Day</div>
+            </div> -->
+
+        <div class="welcome-text">
+          <h2>Welcome Back</h2>
+          <p>Please login to your account</p>
+        </div>
+
+        <form>
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              class="form-input"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              class="form-input"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+
+          <div class="form-options clearfix">
+            <div class="remember-me">
+              <input type="checkbox" id="remember" class="checkbox-input" />
+              <label for="remember" class="checkbox-label">Remember me</label>
+            </div>
+            <a href="#" class="forgot-password">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <div class="divider">Or continue with</div>
+
+        <div class="signup-text">
+          Don't have an account?
+          <a href="./sign_up.html" class="signup-link">Sign Up</a>
+        </div>
       </div>
     </div>
-    <!-- Footer -->
+
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-section">

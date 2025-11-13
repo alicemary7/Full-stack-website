@@ -1,77 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../styles/contact.css" />
-</head>
-<body>
-   <nav class="navbar">
-      <div class="logo">BLOOMHER</div>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="logo"><a href="../index.html">BLOOMHER</a></div>
       <ul class="nav-links">
         <li><a href="./product.html">ORGANIC PADS</a></li>
-        <li><a href="#mhd">MHD</a></li>
+        <!-- <li><a href="./pages/mhd.html">MHD</a></li> -->
         <li><a href="./irregular.html">IRREGULAR PERIODS</a></li>
       </ul>
       <div class="nav-buttons">
-        <a href="./log_in.html" class="btn-login">Login</a>
-        <button class="btn-cart"><a href="./card.html" style="color: #ffffff" >🛒 Cart</a></button>
+        <a href="./login.html" class="btn-login">Login</a>
+        <button class="btn-cart">
+          <a href="./card.html" style="color: #ffffff">🛒 Cart</a>
+        </button>
       </div>
     </nav>
-      <main class="contact-page">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p class="subtitle">We’re here to support your journey through womanhood — with care, clarity, and compassion.</p>
 
-      <div class="contact-layout">
-        <!-- Contact Form -->
-        <div class="contact-form">
-          <form>
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <select id="subject" name="subject" required>
-                <option value="">— Select a topic —</option>
-                <option value="order">Order Support</option>
-                <option value="product">Product Inquiry</option>
-                <option value="health">Menstrual Health Question</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn">Send Message</button>
-          </form>
-        </div>
+    <main class="contact-page">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p class="subtitle">
+          We’re here to support your journey through womanhood — with care,
+          clarity, and compassion.
+        </p>
 
-        <!-- Contact Info -->
-        <div class="contact-info">
-          <h3>Get in Touch</h3>
-          <p>We respond within 24–48 hours. For urgent order issues, please include your order number.</p>
+        <div class="contact-layout">
+          <!-- Contact Form -->
+          <div class="contact-form">
+            <form>
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                  <option value="">— Select a topic —</option>
+                  <option value="order">Order Support</option>
+                  <option value="product">Product Inquiry</option>
+                  <option value="health">Menstrual Health Question</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn" onclick="handleSignup()">
+                Send Message
+              </button>
+            </form>
+          </div>
 
-          <ul class="info-list">
-            <li>📧 <strong>Email:</strong> hello@bloomher.com</li>
-            <li>📱 <strong>Phone:</strong> +91 98765 43210</li>
-            <li>📍 <strong>Address:</strong> EcoWell Building, 45 Green Avenue, Bengaluru, Karnataka 560001</li>
-          </ul>
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <h3>Get in Touch</h3>
+            <p>
+              We respond within 24–48 hours. For urgent order issues, please
+              include your order number.
+            </p>
 
-          <!-- <div class="mission-note">
+            <ul class="info-list">
+              <li>📧 <strong>Email:</strong> hello@bloomher.com</li>
+              <li>📱 <strong>Phone:</strong> +91 98765 43210</li>
+              <li>
+                📍 <strong>Address:</strong> EcoWell Building, 45 Green Avenue,
+                Bengaluru, Karnataka 560001
+              </li>
+            </ul>
+
+            <!-- <div class="mission-note">
             <p>As part of our commitment to menstrual equity, we partner with schools and NGOs across India to distribute free organic pads and educational resources.</p>
             <p><a href="./blog.html#partnerships">Learn about our impact →</a></p>
           </div> -->
+          </div>
         </div>
       </div>
-    </div>
-  </main>
-</body>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>BLOOMHER</h3>
+          <p>
+            Dedicated to empowering women with knowledge, quality products, and
+            support for their menstrual health journey.
+          </p>
+        </div>
+        <!-- <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#">Organic Pads</a></li>
+                    <li><a href="#">Menstrual Cups</a></li>
+                    <li><a href="#">Period Care Kit</a></li>
+                    <li><a href="#">Wellness Products</a></li>
+                </ul>
+            </div> -->
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="./pages/irregular.html">Period Education</a></li>
+            <li><a href="./pages/lifestyle.html">Health Articles</a></li>
+            <!-- <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Community</a></li> -->
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="./pages/contact.html">Contact Us</a></li>
+            <!-- <li><a href="#">Contact</a></li> -->
+            <!-- <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms</a></li> -->
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Bloomher. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function handleSignup() {
+        const fullname = document.getElementById("name").value;
+        const email = document.getElementById("email ").value;
+        const subject = document.getElementById("subject").value;
+        // const 
+        // const confirmPassword =
+        //   document.getElementById("confirm-password").value;
+        // const terms = document.getElementById("terms").checked;
+
+        if (!name || !email || !subject) {
+          alert("Please fill in all fields");
+          return;
+        }
+
+        // if (password !== confirmPassword) {
+        //   alert("Passwords do not match");
+        //   return;
+        // }
+
+        // if (!terms) {
+        //   alert("Please agree to the Terms & Conditions");
+        //   return;
+        // }
+
+        alert("Account created successfully!");
+      }
+    </script>
+  </body>
 </html>

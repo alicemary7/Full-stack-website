@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart - Bloomher</title>
+    <link rel="stylesheet" href="../styles/addtocard.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="logo">BLOOMHER</div>
+      <ul class="nav-links">
+        <li><a href="./product.html">ORGANIC PADS</a></li>
+        <!-- <li><a href="./pages/mhd.html">MHD</a></li> -->
+        <li><a href="./irregular.html">IRREGULAR PERIODS</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="./login.html" class="btn-login">Login</a>
+        <button class="btn-cart">
+          <a href="./card.html" style="color: #ffffff">🛒 Cart</a>
+        </button>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="page-header">
+        <h1 class="page-title">Shopping Cart</h1>
+        <!-- <div class="breadcrumb">
+          <a href="#">Home</a> / <a href="#">Products</a> / Shopping Cart
+        </div> -->
+      </div>
+
+      <div id="cartContent" class="cart-content">
+        <div class="cart-items">
+          <!-- Cart Item 1 -->
+          <div
+            class="cart-item"
+            data-product="Regular Flow Pads"
+            data-price="299"
+          >
+            <div class="item-image">📦</div>
+            <div class="item-details">
+              <div class="item-name">Regular Flow Pads</div>
+              <div class="item-size">Size: Regular (12 pads)</div>
+              <div class="item-stock">✓ In Stock</div>
+            </div>
+            <div class="item-actions">
+              <div class="item-price">
+                ₹<span class="item-price-value">299</span>
+              </div>
+              <div class="quantity-control">
+                <button class="qty-btn" onclick="updateQuantity(this, -1)">
+                  -
+                </button>
+                <input
+                  type="number"
+                  class="qty-input"
+                  value="1"
+                  min="1"
+                  readonly
+                />
+                <button class="qty-btn" onclick="updateQuantity(this, 1)">
+                  +
+                </button>
+              </div>
+              <button class="remove-btn" onclick="removeItem(this)">
+                Remove
+              </button>
+            </div>
+          </div>
+
+          <!-- Cart Item 2 -->
+          <div
+            class="cart-item"
+            data-product="Heavy Flow Pads"
+            data-price="349"
+          >
+            <div class="item-image">📦</div>
+            <div class="item-details">
+              <div class="item-name">Heavy Flow Pads</div>
+              <div class="item-size">Size: Large (16 pads)</div>
+              <div class="item-stock">✓ In Stock</div>
+            </div>
+            <div class="item-actions">
+              <div class="item-price">
+                ₹<span class="item-price-value">349</span>
+              </div>
+              <div class="quantity-control">
+                <button class="qty-btn" onclick="updateQuantity(this, -1)">
+                  -
+                </button>
+                <input
+                  type="number"
+                  class="qty-input"
+                  value="2"
+                  min="1"
+                  readonly
+                />
+                <button class="qty-btn" onclick="updateQuantity(this, 1)">
+                  +
+                </button>
+              </div>
+              <button class="remove-btn" onclick="removeItem(this)">
+                Remove
+              </button>
+            </div>
+          </div>
+
+          <!-- Cart Item 3 -->
+          <div class="cart-item" data-product="Night Pads" data-price="399">
+            <div class="item-image">📦</div>
+            <div class="item-details">
+              <div class="item-name">Night Pads</div>
+              <div class="item-size">Size: XL (24 pads)</div>
+              <div class="item-stock">✓ In Stock</div>
+            </div>
+            <div class="item-actions">
+              <div class="item-price">
+                ₹<span class="item-price-value">399</span>
+              </div>
+              <div class="quantity-control">
+                <button class="qty-btn" onclick="updateQuantity(this, -1)">
+                  -
+                </button>
+                <input
+                  type="number"
+                  class="qty-input"
+                  value="1"
+                  min="1"
+                  readonly
+                />
+                <button class="qty-btn" onclick="updateQuantity(this, 1)">
+                  +
+                </button>
+              </div>
+              <button class="remove-btn" onclick="removeItem(this)">
+                Remove
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart-summary">
+          <div class="summary-box">
+            <h2 class="summary-title">Order Summary</h2>
+
+            <div class="summary-row">
+              <span class="summary-label"
+                >Subtotal (<span id="itemCount">4</span> items)</span
+              >
+              <span class="summary-value"
+                >₹<span id="subtotal">1396</span></span
+              >
+            </div>
+
+            <div class="summary-row">
+              <span class="summary-label">Shipping</span>
+              <span class="summary-value" id="shipping">Free</span>
+            </div>
+
+            <div class="summary-row">
+              <span class="summary-label">Tax</span>
+              <span class="summary-value">₹<span id="tax">0</span></span>
+            </div>
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-total">
+              <span class="total-label">Total</span>
+              <span class="total-value">₹<span id="total">1396</span></span>
+            </div>
+
+            <button class="checkout-btn" onclick="proceedToCheckout()">
+              Proceed to Checkout
+            </button>
+            <a href="./product.html" class="continue-shopping">← Continue Shopping</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="emptyCart" class="empty-cart" style="display: none">
+        <div class="empty-cart-icon">🛒</div>
+        <h2 class="empty-cart-title">Your Cart is Empty</h2>
+        <p class="empty-cart-text">
+          Looks like you haven't added anything to your cart yet.<br />
+          Start shopping and discover our amazing products!
+        </p>
+        <a href="#" class="shop-now-btn">Start Shopping</a>
+      </div>
+    </div>
+        <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>BLOOMHER</h3>
+          <p>
+            Dedicated to empowering women with knowledge, quality products, and
+            support for their menstrual health journey.
+          </p>
+        </div>
+        <!-- <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#">Organic Pads</a></li>
+                    <li><a href="#">Menstrual Cups</a></li>
+                    <li><a href="#">Period Care Kit</a></li>
+                    <li><a href="#">Wellness Products</a></li>
+                </ul>
+            </div> -->
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="./irregular.html">Period Education</a></li>
+            <li><a href="./lifestyle.html">Health Articles</a></li>
+            <!-- <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Community</a></li> -->
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <!-- <li><a href="#">Contact</a></li> -->
+            <!-- <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms</a></li> -->
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Bloomher. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function updateQuantity(button, change) {
+        const cartItem = button.closest(".cart-item");
+        const qtyInput = cartItem.querySelector(".qty-input");
+        const currentQty = parseInt(qtyInput.value);
+        const newQty = currentQty + change;
+
+        if (newQty >= 1) {
+          qtyInput.value = newQty;
+          updateCartTotals();
+        }
+      }
+
+      function removeItem(button) {
+        const cartItem = button.closest(".cart-item");
+        const productName = cartItem.dataset.product;
+
+        if (
+          confirm(
+            "Are you sure you want to remove " +
+              productName +
+              " from your cart?"
+          )
+        ) {
+          cartItem.remove();
+          updateCartTotals();
+          checkEmptyCart();
+        }
+      }
+
+      function updateCartTotals() {
+        const cartItems = document.querySelectorAll(".cart-item");
+        let subtotal = 0;
+        let itemCount = 0;
+
+        cartItems.forEach(function (item) {
+          const price = parseInt(item.dataset.price);
+          const quantity = parseInt(item.querySelector(".qty-input").value);
+          subtotal += price * quantity;
+          itemCount += quantity;
+        });
+
+        // Update summary
+        document.getElementById("subtotal").textContent = subtotal;
+        document.getElementById("itemCount").textContent = itemCount;
+        document.getElementById("total").textContent = subtotal;
+        document.getElementById("cartCount").textContent = cartItems.length;
+
+        console.log(
+          "Cart Updated - Items:",
+          cartItems.length,
+          "Total:",
+          subtotal
+        );
+      }
+
+      function checkEmptyCart() {
+        const cartItems = document.querySelectorAll(".cart-item");
+        const cartContent = document.getElementById("cartContent");
+        const emptyCart = document.getElementById("emptyCart");
+
+        if (cartItems.length === 0) {
+          cartContent.style.display = "none";
+          emptyCart.style.display = "block";
+          document.getElementById("cartCount").textContent = "0";
+        }
+      }
+
+      function proceedToCheckout() {
+        const cartItems = document.querySelectorAll(".cart-item");
+        const total = document.getElementById("total").textContent;
+
+        let orderSummary = "Order Summary:\n\n";
+
+        cartItems.forEach(function (item, index) {
+          const name = item.dataset.product;
+          const price = item.dataset.price;
+          const qty = item.querySelector(".qty-input").value;
+          orderSummary +=
+            index + 1 + ". " + name + " x" + qty + " - ₹" + price * qty + "\n";
+        });
+
+        orderSummary += "\nTotal Amount: ₹" + total;
+
+        alert(orderSummary + "\n\nRedirecting to checkout...");
+
+        // In real application, redirect to checkout page
+        // window.location.href = '/checkout';
+      }
+
+      // Initial cart totals calculation
+      updateCartTotals();
+    </script>
+  </body>
+</html>

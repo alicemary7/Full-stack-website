@@ -3,122 +3,160 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BloomCare | Sign Up</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <title>Sign Up - BLOOMHER</title>
     <link rel="stylesheet" href="../styles/sign_up.css" />
   </head>
   <body>
-     <nav class="navbar">
-      <div class="logo">BLOOMHER</div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="logo"><a href="../index.html">BLOOMHER</a></div>
       <ul class="nav-links">
-        <li><a href="./pages/product.html">ORGANIC PADS</a></li>
-        <li><a href="#mhd">MHD</a></li>
-        <li><a href="./pages/irregular.html">IRREGULAR PERIODS</a></li>
+        <li><a href="./product.html">ORGANIC PADS</a></li>
+        <!-- <li><a href="./pages/mhd.html">MHD</a></li> -->
+        <li><a href="./irregular.html">IRREGULAR PERIODS</a></li>
       </ul>
       <div class="nav-buttons">
-        <a href="./pages/log_in.html" class="btn-login">Login</a>
-        <button class="btn-cart"><a href="./pages/card.html" style="color: #ffffff" >🛒 Cart</a></button>
+        <a href="./login.html" class="btn-login">Login</a>
+        <button class="btn-cart">
+          <a href="./card.html" style="color: #ffffff">🛒 Cart</a>
+        </button>
       </div>
     </nav>
-
     <div class="signup-container">
-      <div class="header-section">
-        <div class="user-icon">
-          <i class="fas fa-user"></i>
-        </div>
-        <h1 class="header-title">Join Us Today!</h1>
-        <p class="header-subtitle">
-          Create your account and experience the best in feminine care products
-          delivered to your doorstep.
-        </p>
+      <div class="logo">
+        <h1>SIGN UP</h1>
+        <p>Create your account</p>
       </div>
 
-      <div class="form-section">
-        <h2 class="form-title">Create Account</h2>
-        <p class="form-subtitle">Fill in your details to get started</p>
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input
+          type="text"
+          id="fullname"
+          placeholder="Enter your full name"
+          required
+        />
+      </div>
 
-        <form>
-          <div class="input-group">
-            <label for="firstname"> Name</label>
-            <input
-              type="text"
-              id="firstname"
-              placeholder="Enter first name"
-              required
-            />
-          </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
+      </div>
 
-          <!-- <div class="input-group">
-            <label for="lastname">Last Name</label>
-            <input
-              type="text"
-              id="lastname"
-              placeholder="Enter last name"
-              required
-            />
-          </div> -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Create a password"
+          required
+        />
+      </div>
 
-          <div class="input-group">
-            <label for="email">Email Address</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Enter your email"
-              required
-            />
-          </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input
+          type="password"
+          id="confirm-password"
+          placeholder="Confirm your password"
+          required
+        />
+      </div>
 
-          <div class="input-group">
-            <label for="phone">Phone Number</label>
-            <input
-              type="tel"
-              id="phone"
-              placeholder="Enter your phone number"
-              required
-            />
-          </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="terms" required />
+        <label for="terms"
+          >I agree to the <a href="#">Terms & Conditions</a></label
+        >
+      </div>
 
-          <div class="input-group">
-            <label for="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              placeholder="Create a password"
-              required
-            />
-          </div>
+      <button class="signup-btn" onclick="handleSignup()">
+        Create Account
+      </button>
 
-          <div class="input-group">
-            <label for="confirm-password">Confirm Password</label>
-            <input
-              type="password"
-              id="confirm-password"
-              placeholder="Confirm your password"
-              required
-            />
-          </div>
+      <div class="divider">
+        <span>OR</span>
+      </div>
 
-          <div class="options">
-            <div class="terms">
-              <input type="checkbox" id="terms" required />
-              <label for="terms"
-                >I agree to the <a href="#">Terms of Service</a> and
-                <a href="#">Privacy Policy</a></label
-              >
-            </div>
-          </div>
-
-          <button type="submit" class="signup-btn">Create Account</button>
-        </form>
- 
-
-        <div class="signin-link">
-          Already have an account? <a href="#" >Sign in</a>
-        </div>
+      <div class="login-link">
+        Already have an account? <a href="./login.html">Log In</a>
       </div>
     </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>BLOOMHER</h3>
+          <p>
+            Dedicated to empowering women with knowledge, quality products, and
+            support for their menstrual health journey.
+          </p>
+        </div>
+        <!-- <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#">Organic Pads</a></li>
+                    <li><a href="#">Menstrual Cups</a></li>
+                    <li><a href="#">Period Care Kit</a></li>
+                    <li><a href="#">Wellness Products</a></li>
+                </ul>
+            </div> -->
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="./irregular.html">Period Education</a></li>
+            <li><a href="./lifestyle.html">Health Articles</a></li>
+            <!-- <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Community</a></li> -->
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <!-- <li><a href="#">Contact</a></li> -->
+            <!-- <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms</a></li> -->
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Bloomher. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function handleSignup() {
+        const fullname = document.getElementById("fullname").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword =
+          document.getElementById("confirm-password").value;
+        const terms = document.getElementById("terms").checked;
+
+        if (!fullname || !email || !password || !confirmPassword) {
+          alert("Please fill in all fields");
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          alert("Passwords do not match");
+          return;
+        }
+
+        if (!terms) {
+          alert("Please agree to the Terms & Conditions");
+          return;
+        }
+
+        alert("Account created successfully!");
+      }
+
+    </script>
   </body>
 </html>

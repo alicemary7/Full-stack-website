@@ -22,9 +22,10 @@ body {
   line-height: 1.6;
 }
 /* Navigation */
-a{
-            text-decoration: none;
-        }
+a {
+  color:#c41e3a;
+  text-decoration: none;
+}
 
 .navbar {
   background: #fff;
@@ -219,16 +220,60 @@ a{
 .mission-note a:hover {
   text-decoration: underline;
 }
-
-/* === FOOTER === */
+/* Footer */
 .footer {
-  background: var(--text);
+  background: #1a1a1a;
   color: white;
-  text-align: center;
-  padding: 1.5rem 0;
-  margin-top: 3rem;
+  padding: 60px 80px 30px;
 }
 
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 40px;
+  max-width: 1400px;
+  margin: 0 auto 40px;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #c41e3a;
+}
+
+.footer-section p {
+  color: #ccc;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #c41e3a;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #444;
+  color: #aaa;
+  max-width: 1400px;
+  margin: 0 auto;
+}
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   .contact-layout {
