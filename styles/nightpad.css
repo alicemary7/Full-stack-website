@@ -236,7 +236,7 @@ h1 {
 }
 
 .size-radio:checked + .size-btn {
-  background: #c44569;
+  background: #4591c4;
   color: white;
   border-color: #c44569;
 }
@@ -246,9 +246,7 @@ h1 {
   background: #fff5f8;
 }
 
-.size-radio:checked + .size-btn:hover {
-  background: #c44569;
-}
+ 
 
 .quantity-section {
   margin-bottom: 40px;
