@@ -221,7 +221,7 @@ a {
   /* transition: 0.3s; */
   
 }
-.info-cards :hover{
+.info-card:hover{
    transform: translateY(-5px);
   
 }
