@@ -80,7 +80,7 @@ nav a {
   color: #ffffff;
   border: none;
   border-radius: 25px;
-  cursor: pointer;
+  /* cursor: pointer; */
   font-size: 16px;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -90,29 +90,6 @@ nav a {
   background: #c41e3a;
   transform: translateY(-2px);
 }
-
-/* Hero Section */
-/* .hero {
-  background: linear-gradient(135deg, #c41e3a 0%, #8b1526 100%);
-  padding: 100px 80px 60px;
-  text-align: center;
-  color: white;
-}
-
-.hero h1 {
-  font-size: 56px;
-  margin-bottom: 20px;
-  font-weight: 700;
-}
-
-.hero p {
-  font-size: 22px;
-  margin-bottom: 30px;
-  opacity: 0.95;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}  */
 
 /* Why Organic Section */
 .why-organic {
@@ -137,46 +114,6 @@ nav a {
   margin-left: auto;
   margin-right: auto;
 }
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.benefit-card {
-  background: #f5f5dc;
-  padding: 40px;
-  border-radius: 20px;
-  text-align: center;
-  transition: all 0.3s ease;
-  border: 3px solid transparent;
-}
-
-.benefit-card:hover {
-  transform: translateY(-10px);
-  border-color: #c41e3a;
-  box-shadow: 0 15px 40px rgba(196, 30, 58, 0.2);
-}
-
-.benefit-icon {
-  font-size: 50px;
-  margin-bottom: 20px;
-}
-
-.benefit-card h3 {
-  font-size: 24px;
-  color: #c41e3a;
-  margin-bottom: 15px;
-}
-
-.benefit-card p {
-  font-size: 16px;
-  color: #1a1a1a;
-  line-height: 1.8;
-} 
 
 /* Products Section */
 .products-section {
@@ -329,42 +266,6 @@ a {
   line-height: 1.6;
 }
 
-/* CTA Section */
-.cta-section {
-  background: linear-gradient(135deg, #c41e3a 0%, #8b1526 100%);
-  padding: 80px 80px;
-  text-align: center;
-  color: white;
-}
-
-.cta-section h2 {
-  font-size: 42px;
-  margin-bottom: 20px;
-}
-
-.cta-section p {
-  font-size: 20px;
-  margin-bottom: 40px;
-  opacity: 0.95;
-}
-
-.btn-cta {
-  padding: 18px 50px;
-  background: white;
-  color: #c41e3a;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn-cta:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
-}
-
 /* Footer */
 .footer {
   background: #1a1a1a;
@@ -450,7 +351,7 @@ a {
   .why-organic,
   .products-section,
   .features-section,
-  .cta-section,
+  
   .footer {
     padding: 60px 30px;
   }
