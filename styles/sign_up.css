@@ -40,7 +40,14 @@ a {
   align-items: center;
 }
 
-.nav-links a {
+.btn-login {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.btn-admin {
   color: #1a1a1a;
   text-decoration: none;
   font-size: 16px;
@@ -48,8 +55,11 @@ a {
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.btn-login:hover {
   color: #c41e3a;
+}
+.btn-admin:hover{
+  color:#c41e3a;
 }
 
 .nav-buttons {

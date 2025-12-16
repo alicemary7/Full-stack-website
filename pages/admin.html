@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloomher Admin</title>
+  <link rel="stylesheet" href="../styles/admin.css" />
+</head>
+<body>
+
+  <!-- Admin Layout -->
+  <div class="admin-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="brand">BLOOMHER</h2>
+      <ul class="menu">
+        <li class="active">Dashboard</li>
+        <li>Products</li>
+        <li>Orders</li>
+        <li>Blogs</li>
+        <li>Users</li>
+        <li>Logout</li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Top Bar -->
+      <header class="topbar">
+        <h1>Admin Dashboard</h1>
+        <span class="admin-name">Hi, Admin 🌷</span>
+      </header>
+
+      <!-- Stats -->
+      <section class="stats">
+        <div class="stat-card">
+          <h3>Total Products</h3>
+          <p>24</p>
+        </div>
+        <div class="stat-card">
+          <h3>Total Orders</h3>
+          <p>112</p>
+        </div>
+        <div class="stat-card">
+          <h3>Blogs Posted</h3>
+          <p>8</p>
+        </div>
+        <div class="stat-card">
+          <h3>Users</h3>
+          <p>56</p>
+        </div>
+      </section>
+
+      <!-- Table -->
+      <section class="table-section">
+        <h2>Recent Orders</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>User</th>
+              <th>Product</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#1021</td>
+              <td>Anu</td>
+              <td>Organic Pads</td>
+              <td class="success">Delivered</td>
+            </tr>
+            <tr>
+              <td>#1022</td>
+              <td>Sneha</td>
+              <td>Night Pads</td>
+              <td class="pending">Pending</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>

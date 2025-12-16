@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Delivery Address | BloomHer</title>
+    <link rel="stylesheet" href="../styles/address.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Delivery Address</h2>
+
+      <form class="address-form">
+        <div class="row">
+          <input type="text" placeholder="Full Name" required />
+          <input type="tel" placeholder="Phone Number" required />
+        </div>
+
+        <input type="text" placeholder="House / Flat / Building" required />
+        <input type="text" placeholder="Street / Area" required />
+        <input type="text" placeholder="Landmark (optional)" />
+
+        <div class="row">
+          <input type="text" placeholder="City" required />
+          <input type="text" placeholder="State" required />
+        </div>
+
+        <div class="row">
+          <input type="text" placeholder="Pincode" required />
+          <input type="text" value="India" disabled />
+        </div>
+
+        <div class="address-type">
+          <label> <input type="radio" name="type" checked /> Home </label>
+          <label> <input type="radio" name="type" /> Work </label>
+        </div>
+
+        <button type="submit">Save & Continue</button>
+      </form>
+    </div>
+  </body>
+</html>
