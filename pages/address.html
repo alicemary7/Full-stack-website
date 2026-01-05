@@ -2,40 +2,244 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Delivery Address | BloomHer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - BloomHer</title>
     <link rel="stylesheet" href="../styles/address.css" />
   </head>
   <body>
-    <div class="container">
-      <h2>Delivery Address</h2>
+    <header>
+      <div class="logo">BLOOMHER</div>
+      <nav>
+        <ul>
+          <li><a href="./product.html">ORGANIC PADS</a></li>
+          <li><a href="./irregular.html">IRREGULAR PERIODS</a></li>
+        </ul>
+      </nav>
+      <div>
+        <a href="./login.html" style="margin-right: 1rem">Login</a>
+        <a href="./pages/admin.html" style="margin-right: 1rem">Admin</a>
+        <a href="./card.html" class="cart-btn">🛒 Cart</a>
+      </div>
+    </header>
 
-      <form class="address-form">
-        <div class="row">
-          <input type="text" placeholder="Full Name" required />
-          <input type="tel" placeholder="Phone Number" required />
+    <main>
+      <h1>Order & Payment</h1>
+
+      <div class="checkout-container">
+        <!-- Order Summary - DYNAMIC -->
+        <div class="order-summary">
+          <h2>Your Order</h2>
+          <div class="item-row">
+            <div>
+              <div id="product-name">Loading...</div>
+              <div
+                id="product-size"
+                style="font-size: 0.9rem; color: #666"
+              ></div>
+            </div>
+            <div id="product-price">₹0</div>
+          </div>
+          <div class="item-row">
+            <span>Quantity:</span>
+            <span id="product-quantity">1</span>
+          </div>
+          <div class="item-row">
+            <span>Shipping</span>
+            <span>₹99</span>
+          </div>
+          <div class="total">
+            <span>Total</span>
+            <span id="order-total">₹0</span>
+          </div>
         </div>
 
-        <input type="text" placeholder="House / Flat / Building" required />
-        <input type="text" placeholder="Street / Area" required />
-        <input type="text" placeholder="Landmark (optional)" />
+        <!-- Payment Form -->
+        <div class="form-section">
+          <h2>Shipping & Payment</h2>
 
-        <div class="row">
-          <input type="text" placeholder="City" required />
-          <input type="text" placeholder="State" required />
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="address">Shipping Address</label>
+            <input
+              type="text"
+              id="address"
+              placeholder="Street address"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" placeholder="City" required />
+          </div>
+
+          <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" id="state" placeholder="State" required />
+          </div>
+
+          <div class="form-group">
+            <label for="zip">ZIP / Postal Code</label>
+            <input type="text" id="zip" placeholder="ZIP code" required />
+          </div>
+
+          <div class="form-group">
+            <label>Payment Method</label>
+            <div class="payment-methods">
+              <div class="payment-option">
+                <input
+                  type="radio"
+                  id="card"
+                  name="payment"
+                  value="card"
+                  checked
+                />
+                <label for="card">Credit/Debit Card</label>
+              </div>
+              <div class="payment-option">
+                <input type="radio" id="cod" name="payment" value="cod" />
+                <label for="cod">Cash on Delivery</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Details -->
+          <div id="cardDetails" class="card-details active">
+            <div class="form-group">
+              <label for="cardNumber">Card Number</label>
+              <input
+                type="text"
+                id="cardNumber"
+                placeholder="1234 5678 9012 3456"
+                maxlength="19"
+                required
+              />
+            </div>
+            <div class="card-row">
+              <div class="form-group">
+                <label for="expiry">Expiry (MM/YY)</label>
+                <input
+                  type="text"
+                  id="expiry"
+                  placeholder="MM/YY"
+                  maxlength="5"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input
+                  type="text"
+                  id="cvv"
+                  placeholder="123"
+                  maxlength="3"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cardName">Name on Card</label>
+              <input
+                type="text"
+                id="cardName"
+                placeholder="As on card"
+                required
+              />
+            </div>
+          </div>
+
+          <button class="place-order-btn">Place Order</button>
+          <a href="./regularflow.html" class="back-link">← Back to Product</a>
         </div>
+      </div>
+    </main>
 
-        <div class="row">
-          <input type="text" placeholder="Pincode" required />
-          <input type="text" value="India" disabled />
-        </div>
+    <!-- <script>
+    // PRICE MAP FOR SIZES (adjust if needed)
+    const priceMap = {
+      "Small (8 pads)": 199,
+      "Regular (12 pads)": 299,
+      "Large (16 pads)": 399,
+      "XL (24 pads)": 499
+    };
 
-        <div class="address-type">
-          <label> <input type="radio" name="type" checked /> Home </label>
-          <label> <input type="radio" name="type" /> Work </label>
-        </div>
+    const SHIPPING_FEE = 99;
 
-        <button type="submit">Save & Continue</button>
-      </form>
-    </div>
+    // Load product data from localStorage
+    function loadOrderSummary() {
+      const product = JSON.parse(localStorage.getItem('selectedProduct'));
+      
+      if (!product) {
+        alert("No product selected. Redirecting to product page...");
+        window.location.href = "./regularflow.html";
+        return;
+      }
+
+      const { name, selectedSize, quantity } = product;
+      const unitPrice = priceMap[selectedSize] || 299;
+      const totalPrice = (unitPrice * quantity) + SHIPPING_FEE;
+
+      // Update DOM
+      document.getElementById('product-name').textContent = name;
+      document.getElementById('product-size').textContent = selectedSize;
+      document.getElementById('product-price').textContent = `₹${unitPrice}`;
+      document.getElementById('product-quantity').textContent = quantity;
+      document.getElementById('order-total').textContent = `₹${totalPrice}`;
+    }
+
+    // Toggle card details
+    document.querySelectorAll('input[name="payment"]').forEach(radio => {
+      radio.addEventListener('change', function() {
+        const cardDetails = document.getElementById('cardDetails');
+        cardDetails.classList.toggle('active', this.value === 'card');
+      });
+    });
+
+    // Format card inputs
+    document.getElementById('cardNumber').addEventListener('input', function(e) {
+      let v = e.target.value.replace(/\D/g, '');
+      e.target.value = v.replace(/(.{4})/g, '$1 ').trim();
+    });
+
+    document.getElementById('expiry').addEventListener('input', function(e) {
+      let v = e.target.value.replace(/\D/g, '');
+      if (v.length >= 2) v = v.slice(0, 2) + '/' + v.slice(2, 4);
+      e.target.value = v;
+    });
+
+    // Place order
+    document.querySelector('.place-order-btn').addEventListener('click', function() {
+      const name = document.getElementById('name').value;
+      if (!name) {
+        alert("Please enter your name.");
+        return;
+      }
+      alert("Order placed successfully! Thank you for shopping with BloomHer ❤️");
+      localStorage.removeItem('selectedProduct'); // Clear cart
+      // In real app: submit to server
+    });
+
+    // Initialize
+    loadOrderSummary();
+  </script> -->
   </body>
 </html>
