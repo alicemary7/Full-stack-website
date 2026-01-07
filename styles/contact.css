@@ -23,7 +23,7 @@ body {
 }
 /* Navigation */
 a {
-  color:#c41e3a;
+  color: #c41e3a;
   text-decoration: none;
 }
 
@@ -89,8 +89,8 @@ a {
 .btn-login:hover {
   color: #c41e3a;
 }
-.btn-admin:hover{
-  color:#c41e3a;
+.btn-admin:hover {
+  color: #c41e3a;
 }
 
 .btn-cart {

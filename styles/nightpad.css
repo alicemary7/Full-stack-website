@@ -245,7 +245,7 @@ h1 {
 }
 
 .size-radio:checked + .size-btn {
-  background: #4591c4;
+  background: #c44569;
   color: white;
   border-color: #c44569;
 }

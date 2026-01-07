@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../styles/address.css" />
   </head>
   <body>
-    <header>
+    <!-- <header>
       <div class="logo">BLOOMHER</div>
       <nav>
         <ul>
@@ -20,7 +20,7 @@
         <a href="./pages/admin.html" style="margin-right: 1rem">Admin</a>
         <a href="./card.html" class="cart-btn">🛒 Cart</a>
       </div>
-    </header>
+    </header> -->
 
     <main>
       <h1>Order & Payment</h1>
@@ -173,7 +173,7 @@
       </div>
     </main>
 
-    <!-- <script>
+    <script>
     // PRICE MAP FOR SIZES (adjust if needed)
     const priceMap = {
       "Small (8 pads)": 199,
@@ -234,12 +234,13 @@
         return;
       }
       alert("Order placed successfully! Thank you for shopping with BloomHer ❤️");
-      localStorage.removeItem('selectedProduct'); // Clear cart
+      window.location.href="./tracking.html"
+      // localStorage.removeItem('selectedProduct'); // Clear cart
       // In real app: submit to server
     });
 
     // Initialize
     loadOrderSummary();
-  </script> -->
+  </script>
   </body>
 </html>

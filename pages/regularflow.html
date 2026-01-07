@@ -109,8 +109,10 @@
         </div>
 
         <div class="button-group">
-          <a href="./addtocard.html" class="btn btn-add">Add to Cart</a>
-          <a href="./address.html" class="btn btn-buy">Buy Now</a>
+          <a href="./card.html" class="btn btn-add">Add to Cart</a>
+          <a href="./address.html"  class="btn btn-buy" target="_blank"
+            >Buy Now</a
+          >
         </div>
       </div>
     </div>
@@ -128,15 +130,15 @@
         <div class="footer-section">
           <h3>Resources</h3>
           <ul class="footer-links">
-            <li><a href="#">Period Education</a></li>
-            <li><a href="#">Health Articles</a></li>
+            <li><a href="./irregular.html">Period Education</a></li>
+            <li><a href="./medical.html">Health Articles</a></li>
           </ul>
         </div>
 
         <div class="footer-section">
           <h3>Company</h3>
           <ul class="footer-links">
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
           </ul>
         </div>
       </div>
@@ -145,96 +147,99 @@
         <p>&copy; 2025 Bloomher. All rights reserved.</p>
       </div>
     </footer>
-    <!-- <script>
-  // DOM Elements
-  const sizeRadios = document.querySelectorAll('input[name="size"]');
-  const quantityInput = document.querySelector('.quantity-input');
-  const addToCartBtn = document.querySelector('.btn-add');
-  const buyNowBtn = document.querySelector('.btn-buy');
+    <script>
+      // DOM Elements
+      const sizeRadios = document.querySelectorAll('input[name="size"]');
+      const quantityInput = document.querySelector(".quantity-input");
+      const addToCartBtn = document.querySelector(".btn-add");
+      const buyNowBtn = document.querySelector(".btn-buy");
 
-  // Price mapping for each size
-  const priceMap = {
-    "Small (8 pads)": 199,
-    "Regular (12 pads)": 299,
-    "Large (16 pads)": 399,
-    "XL (24 pads)": 499
-  };
+      // Price mapping for each size
+      const priceMap = {
+        "Small (8 pads)": 199,
+        "Regular (12 pads)": 299,
+        "Large (16 pads)": 399,
+        "XL (24 pads)": 499,
+      };
 
-  // Function to get selected size
-  function getSelectedSize() {
-    for (const radio of sizeRadios) {
-      if (radio.checked) {
-        const label = radio.closest('.size-option').querySelector('.size-btn');
-        return label.textContent.trim();
+      // Function to get selected size
+      function getSelectedSize() {
+        for (const radio of sizeRadios) {
+          if (radio.checked) {
+            const label = radio
+              .closest(".size-option")
+              .querySelector(".size-btn");
+            return label.textContent.trim();
+          }
+        }
+        return null;
       }
-    }
-    return null;
-  }
 
-  // Function to get the price for the selected size
-  function getPriceForSize(size) {
-    return priceMap[size] || 299; // fallback to 299 if size not found
-  }
-
-  // Save product data with dynamic price
-  function saveProductData() {
-    const selectedSize = getSelectedSize();
-    const quantity = parseInt(quantityInput.value) || 1;
-
-    if (!selectedSize) {
-      alert("Please select a pad size.");
-      return false;
-    }
-
-    const price = getPriceForSize(selectedSize);
-
-    const product = {
-      name: "Regular Flow Pads",
-      image: "../assets/regular.png",
-      selectedSize: selectedSize,
-      quantity: quantity,
-      price: price // ✅ Now stores the correct price!
-    };
-
-    localStorage.setItem('selectedProduct', JSON.stringify(product));
-    return true;
-  }
-
-  // Add to Cart button
-  addToCartBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    if (saveProductData()) {
-      alert("Added to cart!");
-      window.location.href = "./card.html";
-    }
-  });
-
-  // Buy Now button
-  buyNowBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    if (saveProductData()) {
-      window.location.href = "./address.html";
-    }
-  });
-
-  // Ensure quantity is at least 1
-  quantityInput.addEventListener('change', function() {
-    let value = parseInt(this.value);
-    if (isNaN(value) || value < 1) {
-      this.value = 1;
-    }
-  });
-
-  // Optional: Update displayed price on size change (enhancement)
-  sizeRadios.forEach(radio => {
-    radio.addEventListener('change', function() {
-      const size = getSelectedSize();
-      if (size) {
-        const price = getPriceForSize(size);
-        document.querySelector('.price').textContent = '₹' + price;
+      // Function to get the price for the selected size
+      function getPriceForSize(size) {
+        return priceMap[size] || 299; // fallback to 299 if size not found
       }
-    });
-  });
-</script> -->
+
+      // Save product data with dynamic price
+      function saveProductData() {
+        const selectedSize = getSelectedSize();
+        const quantity = parseInt(quantityInput.value) || 1;
+
+        if (!selectedSize) {
+          alert("Please select a pad size.");
+          return false;
+        }
+
+        const price = getPriceForSize(selectedSize);
+
+        const product = {
+          name: "Regular Flow Pads",
+          image: "../assets/regular.png",
+          selectedSize: selectedSize,
+          quantity: quantity,
+          price: price, // ✅ Now stores the correct price!
+        };
+
+        localStorage.setItem("selectedProduct", JSON.stringify(product));
+        return true;
+      }
+
+      // Add to Cart button
+      addToCartBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (saveProductData()) {
+          alert("Added to cart!");
+          window.location.href = "./card.html";
+        }
+      });
+
+      // Buy Now button
+      buyNowBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (saveProductData()) {
+          window.open("./address.html", "_blank");
+
+        }
+      });
+
+      // Ensure quantity is at least 1
+      quantityInput.addEventListener("change", function () {
+        let value = parseInt(this.value);
+        if (isNaN(value) || value < 1) {
+          this.value = 1;
+        }
+      });
+
+      // Optional: Update displayed price on size change (enhancement)
+      sizeRadios.forEach((radio) => {
+        radio.addEventListener("change", function () {
+          const size = getSelectedSize();
+          if (size) {
+            const price = getPriceForSize(size);
+            document.querySelector(".price").textContent = "₹" + price;
+          }
+        });
+      });
+    </script>
   </body>
 </html>
